@@ -291,7 +291,7 @@ models:
       tags:
         - core
         - encounters
-      materialized: table
+      materialized: materialized_view
     columns:
     - name: _dbt_source_relation
       description: '{{ doc("_dbt_source_relation") }}'
@@ -1303,7 +1303,7 @@ models:
         {% else %}core{%- endif -%}
       alias: procedure
       tags: core
-      materialized: table
+      materialized: materialized_view
     columns:
       - name: procedure_id
         description: '{{ doc("procedure_id") }}'
@@ -1406,7 +1406,7 @@ models:
         - core
         - core_stage_claims
         - encounters
-      materialized: table
+      materialized: materialized_view
 
   - name: core__stg_claims_location
     description: Staging core claims locations
@@ -1466,7 +1466,7 @@ models:
       tags:
         - core
         - core_ stage_claims
-      materialized: table
+      materialized: materialized_view
 
   - name: core__stg_claims_pharmacy_claim
     description: Staging core pharmacy claims
@@ -1539,7 +1539,7 @@ models:
       tags:
         - core
         - core_stage_clinical
-      materialized: view
+      materialized: materialized_view
 
   - name: core__stg_clinical_immunization
     description: Staging core clinical immunization
@@ -1633,4 +1633,4 @@ models:
       tags:
         - core
         - core_stage_clinical
-      materialized: view
+      materialized: materialized_view

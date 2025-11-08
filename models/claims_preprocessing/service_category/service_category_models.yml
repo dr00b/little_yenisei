@@ -7,7 +7,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: service_category_grouper
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -99,7 +99,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_combined_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -111,7 +111,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_combined_institutional_header_level
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -123,7 +123,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_combined_institutional_line_level
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -136,7 +136,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_acute_inpatient_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -148,7 +148,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_ambulance_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -160,7 +160,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_ambulance_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -172,7 +172,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_ambulatory_surgery_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -184,7 +184,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_dialysis_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -196,7 +196,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_dialysis_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -208,7 +208,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_dme_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -220,7 +220,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_emergency_department_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -232,7 +232,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_emergency_department_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -244,7 +244,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_home_health_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -256,7 +256,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_home_health_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -268,7 +268,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_hospice_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -280,7 +280,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_outpatient_hospice_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -292,7 +292,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_outpatient_hospice_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -304,7 +304,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_hospice_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -316,7 +316,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_psychiatric_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -328,7 +328,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_psychiatric_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -340,7 +340,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_rehab_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -352,7 +352,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_rehab_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -364,7 +364,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_lab_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -376,7 +376,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_lab_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -388,7 +388,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_office_based_visit_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -400,7 +400,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_outpatient_hospital_or_clinic_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -412,7 +412,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_outpatient_hospital_or_clinic_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -424,7 +424,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_outpatient_psychiatric_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -436,7 +436,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_outpatient_psychiatric_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -448,7 +448,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_outpatient_rehab_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -460,7 +460,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_skilled_nursing_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -472,7 +472,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_skilled_nursing_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -484,7 +484,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_urgent_care_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -496,7 +496,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_urgent_care_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -507,7 +507,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_acute_inpatient_institutional_med_surg
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -518,7 +518,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_acute_inpatient_institutional_maternity
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -529,7 +529,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_acute_inpatient_institutional_other
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -540,7 +540,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_long_term_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -551,7 +551,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_ambulatory_surgery_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -562,7 +562,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_observation_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -573,7 +573,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_observation_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -586,7 +586,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {% else %}claims_preprocessing{%- endif -%}
       alias: _int_inpatient_substance_use_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -596,7 +596,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__office_based_other_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -607,7 +607,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__office_based_physical_therapy_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -617,7 +617,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__office_based_radiology
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -627,7 +627,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__office_based_surgery_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -638,7 +638,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__pharmacy_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -649,7 +649,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__pharmacy_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -660,7 +660,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_physical_therapy_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -671,7 +671,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_physical_therapy_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -682,7 +682,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_radiology_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -693,7 +693,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_radiology_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -704,7 +704,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_substance_use_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -715,7 +715,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_substance_use_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -726,7 +726,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_surgery_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -737,7 +737,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_surgery_professional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -748,7 +748,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
       alias: service_category__outpatient_rehab_institutional
-      materialized: table
+      materialized: materialized_view
       tags:
         - service_category_grouper
 
@@ -758,7 +758,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper_base
         - claims_preprocessing
@@ -767,7 +767,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -776,7 +776,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -785,7 +785,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -794,7 +794,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -803,7 +803,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -812,7 +812,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
@@ -820,7 +820,7 @@ models:
     config:
       schema: |
         {%- if var('tuva_schema_prefix', None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing{%- else %}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
         - service_category_grouper
         - claims_preprocessing
