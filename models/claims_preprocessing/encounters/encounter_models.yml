@@ -15,7 +15,7 @@ models:
         - acute_inpatient
         - claims_preprocessing
         - encounters
-      materialized: table
+      materialized: materialized_view
     columns:
       - name: encounter_id
         description: '{{ doc("encounter_id") }}'
@@ -140,7 +140,7 @@ models:
         - emergency_department
         - claims_preprocessing
         - encounters
-      materialized: table
+      materialized: materialized_view
     columns:
       - name: encounter_id
         description: '{{ doc("encounter_id") }}'
@@ -263,7 +263,7 @@ models:
         {%- else -%}
           claims_preprocessing
         {%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -388,7 +388,7 @@ models:
         {%- else -%}
           claims_preprocessing
         {%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -513,7 +513,7 @@ models:
         {%- else -%}
           claims_preprocessing
         {%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -638,7 +638,7 @@ models:
         {%- else -%}
           claims_preprocessing
         {%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -763,7 +763,7 @@ models:
         {%- else -%}
           claims_preprocessing
         {%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -888,7 +888,7 @@ models:
         {%- else -%}
           claims_preprocessing
         {%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1010,7 +1010,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1132,7 +1132,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1254,7 +1254,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1376,7 +1376,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1498,7 +1498,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1620,7 +1620,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1742,7 +1742,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1864,7 +1864,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -1986,7 +1986,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2108,7 +2108,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2230,7 +2230,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2352,7 +2352,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2474,7 +2474,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2596,7 +2596,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2718,7 +2718,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2840,7 +2840,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -2962,7 +2962,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3084,7 +3084,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3207,7 +3207,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3334,7 +3334,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3345,7 +3345,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3356,7 +3356,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3368,7 +3368,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3379,7 +3379,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3390,7 +3390,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3401,7 +3401,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3413,7 +3413,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3424,7 +3424,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3435,7 +3435,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3448,7 +3448,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3459,7 +3459,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3470,7 +3470,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3482,7 +3482,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3493,7 +3493,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3504,7 +3504,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3518,7 +3518,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3529,7 +3529,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3540,7 +3540,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3552,7 +3552,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3563,7 +3563,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3574,7 +3574,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3586,7 +3586,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3597,7 +3597,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -3621,7 +3621,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3631,7 +3631,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3641,7 +3641,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3651,7 +3651,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3661,7 +3661,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3671,7 +3671,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3681,7 +3681,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3691,7 +3691,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3701,7 +3701,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3711,7 +3711,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3721,7 +3721,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3731,7 +3731,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3742,7 +3742,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3753,7 +3753,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3763,7 +3763,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3774,7 +3774,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3785,7 +3785,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3796,7 +3796,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3807,7 +3807,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3818,7 +3818,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3829,7 +3829,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3840,7 +3840,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3851,7 +3851,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3863,7 +3863,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3874,7 +3874,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3885,7 +3885,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3896,7 +3896,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3907,7 +3907,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3918,7 +3918,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3929,7 +3929,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3940,7 +3940,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3951,7 +3951,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3962,7 +3962,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3973,7 +3973,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3984,7 +3984,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -3995,7 +3995,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4006,7 +4006,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4017,7 +4017,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4028,7 +4028,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4040,7 +4040,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4051,7 +4051,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4062,7 +4062,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4074,7 +4074,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4085,7 +4085,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4096,7 +4096,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4107,7 +4107,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4118,7 +4118,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4129,7 +4129,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4140,7 +4140,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4151,7 +4151,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4162,7 +4162,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4173,7 +4173,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4184,7 +4184,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4195,7 +4195,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4207,7 +4207,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4218,7 +4218,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4229,7 +4229,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4240,7 +4240,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4251,7 +4251,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4262,7 +4262,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4273,7 +4273,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: view
+      materialized: materialized_view
       tags:
       - claims_preprocessing
       - encounters
@@ -4286,7 +4286,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -4297,7 +4297,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table 
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -4317,7 +4317,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -4327,7 +4327,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -4337,7 +4337,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
@@ -4347,7 +4347,7 @@ models:
       schema: |
         {%- if var('tuva_schema_prefix',None) != None -%}{{var('tuva_schema_prefix')}}_claims_preprocessing
         {%- else -%}claims_preprocessing{%- endif -%}
-      materialized: table
+      materialized: materialized_view
       tags:
         - claims_preprocessing
         - encounters
